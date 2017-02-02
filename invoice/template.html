@@ -1,0 +1,268 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A simple, clean, and responsive HTML invoice template</title>
+
+<style>
+  body{
+    font-size: 14px;
+    width: 900px;
+    margin: 0 auto;
+    line-height: 1.5em;
+  }
+
+  .pull-left{
+    float: left !important;
+  }
+  .pull-right{
+    float: right !important;
+  }
+  .width5{
+    width: 50%;
+  }
+  .list-unstyled{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+  }
+  #tableGrid{
+    width: 100%;
+    font-size: 13px;
+  }
+  .table-striped thead tr {
+    background-color: #545454;
+  }
+
+  .table-striped thead tr th {
+    border: 1px solid #525252 !important;
+    border-bottom: 1px solid #333;
+    color: white;
+    font-weight: bold;
+  }
+
+  .table-striped tbody tr td {
+    padding: 5px 7px;
+    vertical-align: middle;
+  }
+
+  .table-striped tbody tr td.money{
+    text-align: right;
+  }
+
+  .table-striped tbody tr td a {
+    color: Blue;
+  }
+
+  .table-striped tbody tr td a:hover {
+    text-decoration: underline;
+  }
+
+  .table-striped tbody td:nth-child(-n+3) a, .table tbody td:nth-child(-n+3) a:visited {
+    font-weight: bold;
+  }
+
+  .table-striped tbody tr {
+    background-color: transparent !important;
+  }
+
+  .table-striped tbody tr:nth-child(even) {
+    background-color: #f6f6f6 !important;
+  }
+
+  .table-striped tbody tr td > i.text-info, .table tbody tr td > small.text-info {
+    display: block;
+    font-style: italic;
+  }
+
+  th.vTop, td.vTop {
+    vertical-align: top;
+    padding-top: 13px;
+  }
+
+  .table-striped tbody .money{
+  text-align: right;
+  display: block;
+  }
+  .clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+  .clearfix { display: inline-block; }
+  /* start commented backslash hack \*/
+  * html .clearfix { height: 1%; }
+  .clearfix { display: block; }
+  /* close commented backslash hack */
+</style>
+
+<!-- HEADER STYLE -->
+<style>
+  header{
+    font-size: 14px;
+    padding: 5px 0 15px;
+  }
+  header .invoice-sum {
+    width: 300px;
+    font-size: 15px;
+    line-height: 1.5em;
+  }
+  header .invoice-sum p {
+    display: inline-block;
+    margin: 0 0 5px;
+    text-align: left;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <div id="header-top" class="clearfix">
+      <div class="infobill pull-left">
+        <h4> Bill Form : </h4>
+        <div class="billForm">
+          <div class="field">Your Company Name</div>
+          <div class="field">Alamat</div>
+          <div class="field">Kota/Post Code</div>
+          <div class="field">Negara/Provinsi</div>
+        </div>
+      </div>
+      <div class="logo pull-right">
+        <h1>
+          <img src="TOKOIN@1x.png" alt="logo company" width="200"/>
+        </h1>
+      </div>
+    </div>
+    <!-- #header-top -->
+
+    <br/><br/>
+    <div id="header-bottom" class="clearfix">
+
+      <div class="infobill pull-left width5">
+        <h4> Bill To : </h4>
+        <div class="billForm">
+          <div class="field">Your Company Name</div>
+          <div class="field">Alamat</div>
+          <div class="field">Kota/Post Code</div>
+          <div class="field">Negara/Provinsi</div>
+        </div>
+      </div>
+      <div class="invoice-sum pull-right">
+        <ul class="list-unstyled">
+            <li class="clearfix">
+                <h1>Invoice# 00001</h1>
+            </li>
+            <li class="clearfix">
+              <p>Tanggal</p>
+              <span class="pull-right"> 12 Januari 2010 </span>
+            </li>
+            <li class="clearfix">
+              <p><strong>Jumlah Tagihan</strong></p>
+              <span class="pull-right"><strong>Rp.2,500,000</strong></span>
+            </li>
+        </ul>
+      </div>
+    </div>
+    <!-- header-bottom -->
+    <br/><br/>
+
+    <div class="top-note">
+    </div>
+  </header>
+  <section id="content">
+
+    <table id="tableGrid" class="table-striped">
+      <thead>
+        <tr>
+          <th>
+            No
+          </th>
+          <th>
+            Nama
+          </th>
+          <th>
+            Qty
+          </th>
+          <th>
+            UOM
+          </th>
+          <th>
+            Harga
+          </th>
+          <th>
+            Tax
+          </th>
+          <th>
+            Total
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="event">
+          <td> 1 </td>
+          <td> Moccacinuo </td>
+          <td> 20 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> Moccacinuo </td>
+          <td> 20 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+        </tr>
+        <tr  class="event">
+          <td> 1 </td>
+          <td> Moccacinuo </td>
+          <td> 20 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+        </tr>
+        <tr>
+          <td> 1 </td>
+          <td> Moccacinuo </td>
+          <td> 20 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+          <td> 0 </td>
+          <td class="money"> Rp.400,000 </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="pull-right">
+        <strong> Total </strong> : <strong>Qty: 2</strong><strong> Total: Rp.1,200,000 </strong>
+      </div>
+    </div>
+
+    <div class="clearfix"></div>
+    <br/><br/>
+
+  </section>
+  <footer class="clearfix">
+    <section class="clearfix">
+      <div class="terms width5 pull-left">
+        <strong> Terms & Condition </strong>
+        <ul>
+          <li> Bla Bla </li>
+          <li> Bla Bla </li>
+        </ul>
+      </div>
+      <div class="notes pull-right width5">
+        <strong> Notes </strong>
+        <p>Notes jangan di baca</p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
